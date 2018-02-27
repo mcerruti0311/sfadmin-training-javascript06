@@ -1,46 +1,88 @@
 <html>
   <head>
     <title>Compare Shared String and Array Methods</title>
+    <script>
+      function myArrayMethods() {
+          var mySentence = 'This is my sentence';
+          var myNewSentence = 'I want to say more';
+          var wordArray = mySentence.split(" ");
+          var moreWords = myNewSentence.split(" ");
+          var myBigArray = wordArray.concat(moreWords);
+          document.getElementById("div01").innerHTML = "<p> mySentence: " +
+            mySentence +
+            "</p>";
+            document.getElementById("div02").innerHTML = "<p> myNewSentence: " +
+              myNewSentence +
+              "</p>";
+          document.getElementById('a01').innerHTML = myBigArray.toString();
+          document.getElementById('a02').innerHTML = myBigArray.join();
+      }
+    </script>
   </head>
   <body>
+    Put my Array results here.
+    <div id="div01"></div>
+    <div id="div02"></div>
+
     <h3>Compare Shared String and Array Methods</h3>
     <table border="1">
       <tr>
         <th>Method</th>
         <th>Description</th>
+        <th>String</th>
+        <th>Array</th>
       </tr>
       <tr>
         <td>concat</td>
         <td>Joins multiple arrays</td>
+        <td id="s01"></td>
+        <td id="a01"></td>
       </tr>
       <tr>
         <td>join</td>
         <td>Joins all the array elements together into a string.</td>
+        <td id="s02"></td>
+        <td id="a02"></td>
       </tr>
       <tr>
         <td>toString</td>
         <td>Returns the array as a string.</td>
+        <td id="s03"></td>
+        <td id="a03"></td>
       </tr>
       <tr>
         <td>indexOf</td>
         <td>Searches the array for specific elements.</td>
+        <td></td>
+        <td></td>
       </tr>
       <tr>
         <td>lastIndexOf</td>
         <td>Returns the last item in the array that matches the search criteria.</td>
+        <td></td>
+        <td></td>
       </tr>
       <tr>
         <td>slice</td>
         <td>Returns a new array from the specified index and length.</td>
+        <td></td>
+        <td></td>
       </tr>
       <tr>
         <td>sort</td>
         <td>Sorts the array alphabetically or by the supplied function.</td>
+        <td></td>
+        <td></td>
       </tr>
       <tr>
         <td>splice</td>
         <td>Adds or deletes the specified index(es) to or from the array.</td>
+        <td></td>
+        <td></td>
       </tr>
     </table>
+    <script>
+      myArrayMethods();
+    </script>
   </body>
 </html>
